@@ -1,9 +1,9 @@
 from Tkinter import *
 import Tkinter
 import tkMessageBox
+import subprocess
 
 installer_window = Tkinter.Tk()
-
 installer_window.title("Mac Installer")
 installer_window.geometry("300x300")
 
@@ -15,7 +15,11 @@ Malwarebytes = IntVar()
 def run():
     if MSOffice.get() == 1: 
         # install Office
-        print("blah") # just so it runs
+        subprocess.check_call(["open", "installation_files/MicrosoftOffice.pkg"])
+    if Pitt_Printing.get() == 1:
+    	subprocess.check_call(["open", "installation_files/PittPrintingClient.pkg"])
+	if Malwarebytes.get() == 1:
+		subprocess.check_call(["open", "installation_files/Malwarebytes.pkg"])
 # -----------------------------------------------------------------------------------------------------#  
 def select_all_standard():
 	if (MSOffice.get() + Pitt_Printing.get() + Malwarebytes.get()) >= 1:
