@@ -1,6 +1,9 @@
 # Mac .DS_Store	 
 .DS_Store	 
 
+# Installer files
+installation_files/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
